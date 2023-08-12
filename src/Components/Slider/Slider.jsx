@@ -1,41 +1,42 @@
-import React from 'react'
+import React, { useState } from 'react';
 import EastOutlinedIcon from '@mui/icons-material/EastOutlined';
 import WestOutlinedIcon from '@mui/icons-material/WestOutlined';
 import "./Slider.scss";
 
 const Slider = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
   const data = [
-    "https://i.ibb.co/8gFyj7Q/sgm.jpg",
-    "https://i.ibb.co/fnJYYB4/beras.jpg",
-    "https://i.ibb.co/KW813ck/basreng.jpg",
-    "https://i.ibb.co/6y72xyc/popok.jpg",
-    "https://i.ibb.co/p4FKBYc/nescafe.jpg",
-    "https://i.ibb.co/KrYVfJP/tehtongjie.jpg"
+    "https://i.ibb.co/XC9FKqQ/tehtongjie.jpg",
+    "https://i.ibb.co/4N3CtBP/gulaku.jpg",
+    "https://i.ibb.co/SnkQQsm/beras.jpg"
   ];
 
+  const prevSlide = () => {
+    setCurrentSlide(currentSlide === 0 ? 2 : currentSlide - 1);
+  };
 
-
+  const nextSlide = () => {
+    setCurrentSlide(currentSlide === 2 ? 0 : currentSlide + 1);
+  };
 
   return (
     <div className='slider'>
-      <div className='container'>
-        <img src={data[0]} alt="Description 1" />
-        <img src={data[1]} alt="Description 2" />
-        <img src={data[2]} alt="Description 3" />
-        <img src={data[3]} alt="Description 4" />
-        <img src={data[4]} alt="Description 5" />
-        <img src={data[5]} alt="Description 6" />
+      <div className='container' style={{ transform: `translateX(-${currentSlide * 100}vw)` }}>
+        <img src={data[0]} alt="" />
+        <img src={data[1]} alt="" />
+        <img src={data[2]} alt="" />
       </div>
       <div className="icons">
-        <div className="icon">
+        <div className="icon" onClick={prevSlide}>
           <WestOutlinedIcon />
         </div>
-        <div className="icon">
+        <div className="icon" onClick={nextSlide}>
           <EastOutlinedIcon />
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Slider
+export default Slider;
