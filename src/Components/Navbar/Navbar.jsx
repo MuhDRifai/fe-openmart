@@ -13,7 +13,8 @@ const Navbar = () => {
       <div className="wrapper">
         <div className="left">
           <div className="item">
-            <img src="/img/en.png" alt="" style={{ height: "19px" }} />
+            <span>IN</span>
+            {/* <img src="/img/en.png" alt="" style={{ height: "19px" }} /> */}
             <KeyboardArrowDownIcon />
           </div>
           <div className="item">
@@ -21,13 +22,16 @@ const Navbar = () => {
             <KeyboardArrowDownIcon />
           </div>
           <div className="item">
-            <Link className="Link" to="/products/1">Woman</Link>
+            <Link className="Link" to="/products/1">Food</Link>
           </div>
           <div className="item">
-            <Link className="Link" to="/products/2">Men</Link>
+            <Link className="Link" to="/products/2">Drink</Link>
           </div>
           <div className="item">
             <Link className="Link" to="/products/3">Children</Link>
+          </div>
+          <div className="item">
+            <Link className="Link" to="/products/3">Accesories</Link>
           </div>
         </div>
         <div className="center">
