@@ -2,7 +2,7 @@ import React from 'react'
 import Card from "../Card/Card.jsx"
 import "./List.scss"
 
-function List() {
+function List({ cstId, maxPrice, sort }) {
     const data = [
         {
             id: 1,
@@ -41,11 +41,22 @@ function List() {
             newPrice: 105000
         }
     ]
+
+     
+  let sortedProducts = [...data];
+  if (sort === 'asc') {
+    sortedProducts.sort((a, b) => a.newPrice - b.newPrice);
+  } else if (sort === 'desc') {
+    sortedProducts.sort((a, b) => b.newPrice - a.newPrice);
+  }
+
+  const filteredProducts = sortedProducts.filter(item => item.newPrice <= maxPrice);
+
   return (
-    <div className='list'>{data?.map(item=>(
-        <Card item ={item} key ={item.id}/>
+     <div className='list'>{filteredProducts.map(item => (
+      <Card item={item} key={item.id} />
     ))}</div>
-  )
+  );
 }
 
 export default List

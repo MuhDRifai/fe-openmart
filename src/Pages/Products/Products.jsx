@@ -53,13 +53,13 @@ const[sort,setSort] = useState(null)
         <div className="filterItem">
           <h2>Sort By</h2>
           <div className="inputItem">
-            <input type="radio" id='asc' value='asc' name='price' onChange={e=>setSort('asc')} />
-            <label htmlFor="asc">Price (Lowests First)</label>
-          </div>
-          <div className="inputItem">
-            <input type="radio" id='desc' value='desc' name='desc' onChange={e=>setSort('desc')} />
-            <label htmlFor="desc">Price (Hight First)</label>
-          </div>
+  <input type="radio" id='asc' value='asc' name='price' onChange={e => setSort('asc')} />
+  <label htmlFor="asc">Price (Lowest First)</label>
+</div>
+<div className="inputItem">
+  <input type="radio" id='desc' value='desc' name='price' onChange={e => setSort('desc')} />
+  <label htmlFor="desc">Price (Highest First)</label>
+</div>
         </div>
       </div>
       <div className="right">
