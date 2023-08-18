@@ -7,9 +7,9 @@ const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const data = [
-    "https://i.ibb.co/XC9FKqQ/tehtongjie.jpg",
-    "https://i.ibb.co/4N3CtBP/gulaku.jpg",
-    "https://i.ibb.co/SnkQQsm/beras.jpg"
+    "https://images.tokopedia.net/img/cache/1200/NXCtjv/2022/3/9/6a5e9da7-2206-44c5-b384-e68039f91760.jpg",
+    "https://images.tokopedia.net/img/cache/1200/NXCtjv/2023/8/14/b52f770c-b1de-4d87-a779-4da47b375e10.jpg",
+    "https://images.tokopedia.net/img/cache/1200/NXCtjv/2023/5/5/2fc529b5-d161-4f13-9173-8a129f327259.jpg"
   ];
 
   const prevSlide = () => {
